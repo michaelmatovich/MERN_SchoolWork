@@ -25,47 +25,47 @@ const pokémon = Object.freeze([
 ]);
 
 
-//Examples
-// const bListPkmn = pokémon.filter( p => p.name[0] === "B" );
+// Examples
+const bListPkmn = pokémon.filter( p => p.name[0] === "B" );
 
-// console.log(bListPkmn);
+console.log(bListPkmn);
 
-// const pkmnIds = pokémon.map( p => p.id )
+const pkmnIds = pokémon.map( p => p.id )
 
-// console.log(pkmnIds)
+console.log(pkmnIds)
 
-//ID Divisible by 3
+// an array of pokémon objects where the id is evenly divisible by 3
 
-// const idDivByThree = pokémon.filter( val => val.id % 3 == 0);
-// console.log(idDivByThree)
+const idDivByThree = pokémon.filter( val => val.id % 3 == 0);
+console.log(idDivByThree)
 
-//Fire Type
+// an array of pokémon objects that are "fire" type
 
-// const fireType = pokémon.filter( val => val.types.includes("fire"));
-// console.log(fireType)
+const fireType = pokémon.filter( val => val.types.includes("fire"));
+console.log(fireType)
 
-//More than one Type
+// an array of pokémon objects that have more than one type
 
-// const multipleTypes = pokémon.filter( val => val.types.length > 1);
-// console.log(multipleTypes);
+const multipleTypes = pokémon.filter( val => val.types.length > 1);
+console.log(multipleTypes);
 
-// Just Names
-// const namesOnly = pokémon.map( val => val.name );
-// console.log(namesOnly)
+// an array with just the names of the pokémon
+const namesOnly = pokémon.map( val => val.name );
+console.log(namesOnly)
 
-//Names and Id greater than 99
-// const namesOnly2 = pokémon.filter( val => val.id > 99).map(val => val.name);
-// console.log(namesOnly2);
+// an array with just the names of pokémon with an id greater than 99
+const namesOnly2 = pokémon.filter( val => val.id > 99).map(val => val.name);
+console.log(namesOnly2);
 
-//Names and only poison
-// const namesOnly3 = pokémon.filter(val => val.types.includes("poison") && val.types.length == 1).map(val => val.name);
-// console.log(namesOnly3);
+// an array with just the names of the pokémon whose only type is poison
+const namesOnly3 = pokémon.filter(val => val.types.includes("poison") && val.types.length == 1).map(val => val.name);
+console.log(namesOnly3);
 
-// First type where second type is flying
-// const firstType = pokémon.filter(val => val.types[1] == "flying").map(val => val.types[0]);
-// console.log(firstType);
+// an array containing just the first type of all the pokémon whose second type is "flying"
+const firstType = pokémon.filter(val => val.types[1] == "flying").map(val => val.types[0]);
+console.log(firstType);
 
-// Count of normal type pokemon
-// count = 0;
-// const countNormal = pokémon.filter(val => val.types.includes("normal")).map(val => count++).length;
-// console.log(countNormal)
+// a count of the number of pokémon that are "normal" type
+count = 0;
+const countNormal = pokémon.filter(val => val.types.includes("normal")).length
+console.log(countNormal)
