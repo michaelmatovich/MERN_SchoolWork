@@ -100,7 +100,7 @@ const expectedMerge4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // }
 
 
-//CRAZY Algo
+// CRAZY Algo
 // combine=(a,b)=>
 // {
 //     let c=[],l=0,r=0;
@@ -113,38 +113,68 @@ const expectedMerge4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //     return c;
 // }
 
+
+
 // merge=(a)=>
 // {
-//     if(a.length==1) return a;
-//     let mid=a.length>>1;
-//     return combine(a.slice(0,mid),a.slice(mid));
+    //     if(a.length==1) return a;
+    //     let mid=a.length>>1;
+    //     return combine(a.slice(0,mid),a.slice(mid));
+    // }
+    // console.log(merge([1,2,4,5,6,9,1,7,8,10,12,15,18]));
+    
+    //Saraubh mergesort
+    // function mergeSort(nums) {
+        //     console.log(nums)
+        //     //if the array length is greater than 1, we can split it in half
+        //     if(nums.length >1){ 
+            //         let mid = Math.floor(nums.length/2);
+            //         let lefthalf = nums.slice(0,mid);
+//         let righthalf = nums.slice(mid)
+//         let left = mergeSort(lefthalf)
+//         let right = mergeSort(righthalf)
+
+//     }else{
+    //         return nums
+    //     }
+    // }
+    
+    // combine=(a,b)=>{
+//         var c = [], l = 0, r = 0, cl = 0;
+//         c[a.length + b.length - 1] = 0; // Pre-allocate
+//         while (l < a.length || r < b.length) {
+//             if (l < a.length && r < b.length) {
+//                 if (a[l] < b[r]) {
+//                     c[cl] = a[l];
+//                     cl += 1;
+//                     l += 1;
+//                 }
+//                 else { // a[l] >= b[r] === true
+//                     c[cl] = b[r];
+//                     cl += 1;
+//                     r += 1;
+//                 }
+//             }
+//             else if (l < a.length) {
+//                 c[cl] = a[l];
+//                 cl += 1;
+//                 l += 1;
+//             }
+//             else { // r < b.length === true
+//                 c[cl] = b[r];
+//                 cl += 1;
+//                 r += 1;
+//             }
+//         }
+//     return c;
 // }
-// console.log(merge([1,2,4,5,6,9,1,7,8,10,12,15,18]));
-
-//Saraubh mergesort
-function mergeSort(nums) {
-    console.log(nums)
-    //if the array length is greater than 1, we can split it in half
-    if(nums.length >1){ 
-        let mid = Math.floor(nums.length/2);
-        let lefthalf = nums.slice(0,mid);
-        let righthalf = nums.slice(mid)
-        let left = mergeSort(lefthalf)
-        let right = mergeSort(righthalf)
-        return merge(left, right)
-
-    }else{
-        return nums
-    }
-}
 
 
 
 
 
 
-
-
+//         return merge(left, right)
 
 
 
@@ -176,43 +206,77 @@ const expectedSort = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
  * @param {Array<number>} nums
  * @returns {Array<number>} A New sorted array.
  */
-function mergeSort(nums) { }
+// function mergeSort(nums) { }
 
 //Another Merge
 // function merge(arr1, arr2) {
-//     let result = [];
-//     let smallerArr = arr1;
-//     let largerArr = arr2;
-
-//     if (arr2.length < arr1.length){
-//         smallerArr = arr2;
-//         largerArr = arr1;
-//     }
-
-//     let j = 0;
-
-//     for (let i = 0; i < largerArr.length; i++){
-//         while(smallerArr[j] < largerArr[i] && j < smallerArr.length){
-//             result.push(smallerArr[j]);
-//             j++;
-//         }
+    //     let result = [];
+    //     let smallerArr = arr1;
+    //     let largerArr = arr2;
+    
+    //     if (arr2.length < arr1.length){
+        //         smallerArr = arr2;
+        //         largerArr = arr1;
+        //     }
+        
+        //     let j = 0;
+        
+        //     for (let i = 0; i < largerArr.length; i++){
+            //         while(smallerArr[j] < largerArr[i] && j < smallerArr.length){
+                //             result.push(smallerArr[j]);
+                //             j++;
+                //         }
 //         result.push(largerArr[i]);
 //     }
 
 //     while(j < smallerArr.length){
-//         result.push(smallerArr[j]);
-//         j++;
-//     }
-
-//     return result;
-// }
-
-// function mergeSort(nums) {
-//     if(nums.length == 1){
-//         return nums;
-//     }
-
-//     let splitIndex = Math.floor(nums.length/2);
-
-//     return merge(mergeSort(nums.slice(0,splitIndex)), mergeSort(nums.slice(splitIndex,nums.length)));
-// }
+    //         result.push(smallerArr[j]);
+    //         j++;
+    //     }
+    
+    //     return result;
+    // }
+    
+    // function mergeSort(nums) {
+        //     if(nums.length == 1){
+            //         return nums;
+            //     }
+            
+            //     let splitIndex = Math.floor(nums.length/2);
+            
+            //     return merge(mergeSort(nums.slice(0,splitIndex)), mergeSort(nums.slice(splitIndex,nums.length)));
+            // }
+            
+            
+            //The Dave Way
+            combine=(a,b)=>{
+            var c = [], l = 0, r = 0;
+            while (l < a.length || r < b.length) {
+                if (l < a.length && r < b.length) {
+                    if (a[l] < b[r]) {
+                        c.push(a[l]);
+                        l += 1;
+                    }
+                    else { // a[l] >= b[r] === true
+                        c.push(b[r]);
+                        r += 1;
+                    }
+                }
+                else if (l < a.length) {
+                    c.push(a[l]);
+                    l += 1;
+                }
+                else { // r < b.length === true
+                    c.push(b[r]);
+                    r += 1;
+                }
+            }
+            return c;
+        }      
+            console.log(combine(sortedA1, sortedB1));
+            console.log(combine(sortedA2, sortedB2));
+            console.log(combine(sortedA3, sortedB3));
+            console.log(combine(sortedA4, sortedB4));
+            console.log(combine([1,2,4,5,6,9,10, 11, 12, 13, 14],[1,7,8,10,12,15,18]));
+            console.log(combine([1,7,8,10,12,15,18], [1,2,4,5,6,9,10, 11, 12, 13, 14]));
+            

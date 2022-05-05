@@ -1,0 +1,61 @@
+h1 {
+    color: rebeccapurple;
+}
+
+body {
+    background: linear-gradient(30deg, rgb(17, 47, 102), lightcyan);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+.relative {
+    position: relative;
+    top: 500px;
+}
+
+.box {
+    background-color: white;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    opacity: .75;
+    /* animation: box-spin infinite 2s ease-in; */
+}
+.circle{
+    border-radius: 50%;
+    background-color: white;
+    height: 25px;
+    width: 25px;
+    /* animation: fade-out infinite 1s ease-out; */
+}
+
+
+@keyframes box-spin {
+    from {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out{
+    from{
+        opacity: 1;
+        height: 25px;
+        width: 25px;
+    }
+
+to {
+    opacity: 0;
+    transform: scale(7,7);
+    }
+}
