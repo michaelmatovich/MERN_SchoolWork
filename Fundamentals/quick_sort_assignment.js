@@ -5,6 +5,7 @@ function quickSort(arr, start, end) {
     sorts = 0;
     front_sorted = 0;
     pivot = Math.floor((start + end) / 2);
+    pivot = 0;
     placeholder = 0;
     
         do {
@@ -30,6 +31,3 @@ function quickSort(arr, start, end) {
 }
 
 console.log(quickSort(unsortedArray, 0, 9));
-console.log(quickSort(unsortedArray, 0, 5));
-console.log(quickSort(unsortedArray, 0, 5));
-console.log(quickSort(unsortedArray, 0, 5));
