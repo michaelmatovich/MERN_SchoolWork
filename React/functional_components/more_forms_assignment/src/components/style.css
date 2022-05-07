@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.flex {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.App-style {
+    background-color: whitesmoke;
+    width: 40%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.box {
+    border: 2px solid white;
+    min-height: 500px;
+    width: 30%;
+    margin: 0 auto;
+
+}
+
+.left-column {
+    background-color: #333;
+    border: 2px solid white;
+    padding: 20px 20px;
+    
+}
+.right-column h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.right-column {
+    background-color: cornflowerblue;
+    border: 2px solid #333;
+    padding: 20px 20px;
+}
+
+.left-column h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#submit {
+    padding: .5em 1em;
+    background-color: cornflowerblue;
+    color: white;
+    width: 50%;
+    margin: 10px 0 0 58px;
+    text-align: center;
+    font-size: medium;
+}
+
+.formData {
+    border: 2px solid #333;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 20.5px;
+    background-color: white;
+}
+
+h4 {
+    color: black;
+}
+.error{
+    color: red;
+    text-align: center;
+}
