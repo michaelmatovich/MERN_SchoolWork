@@ -1,8 +1,16 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
+.box{
+  width: 40%;
+  min-height: 300px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+input{
+  margin-bottom: 20px;
+}
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
