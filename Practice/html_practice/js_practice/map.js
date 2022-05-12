@@ -1,8 +1,26 @@
+let test = "/planets/293/";
 
-    
+let planetId = "";
 
-    const groceryList = ["pearl onions", "thyme", "cremini mushrooms", "butter"];
-  
-const booboo = groceryList.map(item, i);
+let index = test.length-2;
 
-console.log(booboo);
+while(test[index] != "/")
+{
+    planetId += test[index];
+    index--;
+}
+
+planetId = [...planetId].reverse().join("");
+// planetId = reversePlanetId.reverse().join("");
+
+// // for(let i = reversePlanetId.length-1; i > -1; i--)
+// // {
+// //     planetId += reversePlanetId[i];
+// // }
+
+console.log(planetId);
+
+let string = "!onaiP"
+string = [...string].reverse().join("");
+
+console.log(string); // "Piano!"
