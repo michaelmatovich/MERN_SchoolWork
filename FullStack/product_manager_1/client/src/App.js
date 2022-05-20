@@ -21,7 +21,7 @@ function App() {
         <Route exact path = "/">
           <NewProductForm></NewProductForm>
           <hr></hr>
-          <AllProducts></AllProducts>
+          <AllAuthors></AllAuthors>
         </Route>
         <Route exact path = "/products/:id/edit">
           <EditProduct></EditProduct>

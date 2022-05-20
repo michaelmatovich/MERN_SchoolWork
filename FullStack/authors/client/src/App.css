@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+.box{
+  border: 1px solid black;
+  width: 25%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px;
+
+}
+#submitbtn, #cancel{
+  padding: .25em 1em;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: large;
+  border: 1px solid black;
+  margin: 2px;
+}
+.error{
+  color: red;
+}
+.linkage{
+  text-decoration: none;
+  color: cornflowerblue;
+  font-size: large;
+  
+}
+.linkage2{
+  color: black;
+}
+.box2{
+  border: 2px solid black;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
