@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import { Link } from "react-router-dom";
 
 
 const AllProducts = () => {
@@ -25,9 +26,7 @@ const AllProducts = () => {
                     allProducts.map((productObj, idx)=>{
                         return (
                                 <div key = {productObj._id} className = "box">
-                                    { productObj.title }<br></br>
-                                    { productObj.price }<br></br>
-                                    { productObj.description }<br></br><br></br>
+                                    <Link className = "linkage" to={`/products/${productObj._id}`}> { productObj.title } </Link>
                                 </div>
                         )                        
                     })

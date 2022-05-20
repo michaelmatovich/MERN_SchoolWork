@@ -6,8 +6,10 @@ import {
   Route,
   Link 
 } from "react-router-dom";
+
 import AllProducts from './components/AllProducts';
 import NewProductForm from './components/NewProductForm';
+import OneProduct from './components/OneProduct';
 
 
 function App() {
@@ -20,6 +22,9 @@ function App() {
           <NewProductForm></NewProductForm>
           <hr></hr>
           <AllProducts></AllProducts>
+        </Route>
+        <Route exact path = "/products/:id">
+          <OneProduct></OneProduct>
         </Route>
       </Switch>
     </div>

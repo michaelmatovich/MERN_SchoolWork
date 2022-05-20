@@ -17,3 +17,19 @@
   color: white;
   font-size: large;
 }
+.error{
+  color: red;
+}
+.linkage{
+  text-decoration: none;
+  color: cornflowerblue;
+  font-size: large;
+  
+}
+.box2{
+  border: 2px solid black;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
