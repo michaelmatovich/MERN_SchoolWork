@@ -27,6 +27,7 @@ const AllProducts = () => {
                         return (
                                 <div key = {productObj._id} className = "box">
                                     <Link className = "linkage" to={`/products/${productObj._id}`}> { productObj.title } </Link>
+                                    <Link className = "linkage2" to ={`/products/${productObj._id}/edit`}>Edit</Link>
                                 </div>
                         )                        
                     })

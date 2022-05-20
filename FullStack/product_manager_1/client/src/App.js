@@ -10,7 +10,7 @@ import {
 import AllProducts from './components/AllProducts';
 import NewProductForm from './components/NewProductForm';
 import OneProduct from './components/OneProduct';
-
+import EditProduct from './components/EditProduct';
 
 function App() {
   return (
@@ -23,6 +23,10 @@ function App() {
           <hr></hr>
           <AllProducts></AllProducts>
         </Route>
+        <Route exact path = "/products/:id/edit">
+          <EditProduct></EditProduct>
+        </Route>
+        
         <Route exact path = "/products/:id">
           <OneProduct></OneProduct>
         </Route>
