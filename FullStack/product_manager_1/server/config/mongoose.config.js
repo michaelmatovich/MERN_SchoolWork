@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-db = "project_manager";
+
 
 //change cluster name
-mongoose.connect(`mongodb+srv://root:root@clustermay.6uoeb.mongodb.net/${db}?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://root:root@clustermay.xvmj1.mongodb.net/products_db?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
